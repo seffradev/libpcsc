@@ -19,6 +19,19 @@ add_library(${PROJECT_NAME}
   src/utils.cpp
 )
 
+install(
+	TARGETS ${PROJECT_NAME}
+	DESTINATION lib
+)
+
+install(
+	DIRECTORY
+	  include/flag-set-cpp
+	  include/magic_enum
+	  include/${PROJECT_NAME}
+	DESTINATION include
+)
+
 target_include_directories(${PROJECT_NAME}
   PUBLIC
   include
